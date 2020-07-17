@@ -1,4 +1,4 @@
-# YCQL 4.x Java Driver 4.x tests
+# YCQL 4.x Java Driver tests
 
 # Environment Setup
 
