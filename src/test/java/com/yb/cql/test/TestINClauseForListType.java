@@ -39,7 +39,7 @@ public class TestINClauseForListType {
         String createTable = "CREATE TABLE IF NOT EXISTS employee (id int PRIMARY KEY, " + "name varchar, " +
                 "age int, " + "language varchar);";
         session.execute(createTable);
-        System.out.println("Executing a query now");
+        System.out.println("Inserting few records now...");
         for (int i = 0; i < num; i++) {
             session.execute("insert into employee (id, name, age, language) " +
                     "values (" + i + ", 'name" + i + "', " + (i+40) + ", 'address" + i + "')");
@@ -47,7 +47,6 @@ public class TestINClauseForListType {
         System.out.println("All inserts completed");
         PreparedStatement ps = session.prepare("select * from employee where id in ?");
         List ids = new ArrayList<Integer>();
-//        Set ids = new HashSet();
         ids.add(3);
         ids.add(6);
         ids.add(9);
